@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --light-gray: #24242e;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to start for better top-spacing on larger screens */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgb(255 255 255);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 50px; /* Add some space from the top */
+}
+
+h1 {
+    background: linear-gradient(255deg, #4a90e2, #9450e3); -webkit-background-clip: text; 
+	-webkit-text-fill-color: transparent;   
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.upload-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.upload-button {
+    background: linear-gradient(45deg, #4a90e2, #9450e3);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+}
+
+.upload-button:hover {
+    background: linear-gradient(45deg,#9450e3, #4a90e2);
+}
+
+.hidden-input {
+    display: none;
+}
+
+.file-name-display {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    flex-grow: 1; /* Allow to take available space */
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for long file names */
+}
+
+.image-preview-container {
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Ensure a minimum height even without image */
+    background-color: var(--light-gray);
+    overflow: hidden; /* Hide overflow for large images */
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 300px; /* Limit height for aesthetic reasons */
+    display: none; /* Hidden by default until an image is selected */
+    border-radius: 4px;
+}
+
+.action-button {
+    background: linear-gradient(45deg, #4a90e2, #9450e3);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 250px; /* Limit width for button */
+}
+
+.action-button:hover:not(:disabled) {
+    background-color: #251f45;
+}
+
+.action-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.description-output {
+    text-align: left;
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+}
+
+.description-output h2 {
+    background: linear-gradient(213deg, #4a90e2, #9450e3); -webkit-background-clip: text; 
+	-webkit-text-fill-color: transparent;  
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.description-text {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #fcfcfc;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 80px; 
+    display: flex;
+    align-items: center; 
+}
+	.angel{
+		margin-top: 60px; 
+		background: linear-gradient(45deg, #4a90e2, #9450e3); -webkit-background-clip: text; 
+		-webkit-text-fill-color: transparent;   
+		cursor: pointer;
+		transition: all 0.3s;
+	}
+	.angel:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: linear-gradient(45deg, #9450e3, #4a90e2); -webkit-background-clip: text; 
+		-webkit-text-fill-color: transparent;
+		font-size: 18px;
+}
+ 
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .upload-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .action-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .upload-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .file-name-display {
+        text-align: center;
+    }
+}

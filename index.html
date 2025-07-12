@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Description Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Description Generator</h1>
+		<p style="color: #4a90e2;font-family: system-ui;">Developed by <a href="https://linktr.ee/DangerousAngel" class="angel">DangerousAngel</a></p><br><br>
+		
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-button">Choose Image</label>
+            <input type="file" id="imageUpload" accept="image/*" class="hidden-input">
+            <span id="fileNameDisplay" class="file-name-display">No file chosen</span>
+        </div>
+        <div class="image-preview-container">
+            <img id="imagePreview" src="#" alt="Image Preview" class="image-preview">
+        </div>
+        <button id="identifyButton" class="action-button" disabled>Get Description</button>
+        <div class="description-output">
+            <h2>Description:</h2>
+            <p id="description" class="description-text">Upload an image to get started.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
